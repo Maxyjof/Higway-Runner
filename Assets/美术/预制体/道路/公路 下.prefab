@@ -79,6 +79,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   RoadMeshRenderer: {fileID: 2748163680648735412}
   NextRoadPoint: {fileID: 4096628024342268744}
+  Type: 4
+  UsedAngle: 0
 --- !u!1001 &3594688269185463856
 PrefabInstance:
   m_ObjectHideFlags: 0

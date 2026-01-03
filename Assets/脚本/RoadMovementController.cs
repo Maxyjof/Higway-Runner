@@ -1,12 +1,15 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class RoadMovementController : MonoBehaviour
 {
     [Header("引用")]
     public Transform SceneRoot;
     public Transform VCFollowPoint;
-    public Transform Cam;
+    public Transform CamPoint;
+    public Transform CamSelf;
+    public CarController CarController;
     public List<Road> RoadPrefabs;
     public List<Material> RoadMaterials;
 
@@ -55,49 +58,24 @@ public class RoadMovementController : MonoBehaviour
         var secondRoad = ActiveRoads[1];
 
         //更新相机的位置和旋转
-        var move = (secondRoad.transform.position - Cam.position).normalized * moveOffset;
-        Cam.rotation = Quaternion.Lerp(Cam.rotation, secondRoad.transform.rotation, move.magnitude / (secondRoad.transform.position - firstRoad.transform.position).magnitude);
-        Cam.position += move;
+        var move = (secondRoad.transform.position - CamPoint.position).normalized * moveOffset;
+        CamPoint.rotation = Quaternion.Lerp(CamPoint.rotation, secondRoad.transform.rotation, move.magnitude / (secondRoad.transform.position - firstRoad.transform.position).magnitude);
+
+        if (secondRoad.Type == RoadType.Left)
+        {
+            CarController.TurningOffset += CarController.TurningSpeed * 0.5f * Time.deltaTime;
+        }
+        else if (secondRoad.Type == RoadType.Right)
+        {
+            CarController.TurningOffset -= CarController.TurningSpeed * 0.5f * Time.deltaTime;
+        }
+
+        CamPoint.position += move;
+        CamSelf.localPosition = new Vector3(CarController.TurningOffset, 0.5f, 0f);
 
         //当有道路需要删除时，更新道路
-        if ((Cam.position - secondRoad.transform.position).magnitude < 0.1f)
+        if ((CamPoint.position - secondRoad.transform.position).magnitude < 0.1f)
         {
-            //var lastRoad = ActiveRoads[ActiveRoads.Count - 1];
-
-            //更新地图的旋转
-            if (!firstRoad.UsedAngle && firstRoad.NextRoadPoint.rotation != Quaternion.identity)
-            {
-                //所有道路自己旋转
-                // if (firstRoad.NextRoadPoint.localEulerAngles.y != 0)
-                // {
-                //     foreach (var road in ActiveRoads)
-                //     {
-                //         road.transform.RotateAround(Vector3.zero, Vector3.up, -firstRoad.NextRoadPoint.localEulerAngles.y);
-                //     }
-                // }
-                //
-                // if (firstRoad.NextRoadPoint.localEulerAngles.x != 0)
-                // {
-                //     foreach (var road in ActiveRoads)
-                //     {
-                //         road.transform.RotateAround(Vector3.zero, Vector3.right, -firstRoad.NextRoadPoint.localEulerAngles.x);
-                //     }
-                //
-                //     SceneRoot.position += Vector3.up * 0.1f * (firstRoad.NextRoadPoint.eulerAngles.x < 0 ? 1 : -1);
-                // }
-
-                //VC相机旋转
-                // VCFollowPoint.position = firstRoad.NextRoadPoint.position;
-                // VCFollowPoint.rotation = firstRoad.NextRoadPoint.rotation;
-                // VCFollowPoint.position += VCFollowPoint.up * 0.5f;
-
-                //相机跟随
-                //VCFollowPoint.position = Vector3.Lerp(VCFollowPoint.position, secondRoad.transform.position, moveOffset);
-                //VCFollowPoint.rotation = secondRoad.transform.rotation;
-
-                firstRoad.UsedAngle = true;
-            }
-
             //删除背后的道路
             ActiveRoads.Remove(firstRoad);
             Destroy(firstRoad.gameObject);

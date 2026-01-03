@@ -48,6 +48,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   RoadMeshRenderer: {fileID: 993502718191845074}
   NextRoadPoint: {fileID: 4030585824222057429}
+  Type: 1
+  UsedAngle: 0
 --- !u!1 &8084396080553162707
 GameObject:
   m_ObjectHideFlags: 0
