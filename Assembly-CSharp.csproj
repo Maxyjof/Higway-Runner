@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\脚本\RoadMovementController.cs" />
+    <Compile Include="Assets\脚本\PhoneSwitch.cs" />
     <Compile Include="Assets\脚本\Road.cs" />
     <Compile Include="Assets\脚本\SkipUnityLogo.cs" />
     <Compile Include="Assets\脚本\CarController.cs" />
