@@ -13,7 +13,7 @@ public class PhoneSwitch: MonoBehaviour
         if(Application.platform == RuntimePlatform.Android)
         {
             PhoneHUD.SetActive(true);
-            Screen.orientation = ScreenOrientation.LandscapeRight;
+            Screen.orientation = ScreenOrientation.LandscapeLeft;
         }
         else
         {
