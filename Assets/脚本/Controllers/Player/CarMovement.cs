@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 namespace Game.Controllers
 {
-    public class CarController : MonoBehaviour
+    public class CarMovement : MonoBehaviour
     {
         [Header("引用")]
         public Transform SceneRoot;

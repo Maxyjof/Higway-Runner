@@ -46,12 +46,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\脚本\Controllers\Road\RoadSideObject.cs" />
+    <Compile Include="Assets\脚本\Controllers\Player\RoadGenerator.cs" />
     <Compile Include="Assets\脚本\Logic\SkipUnityLogo.cs" />
     <Compile Include="Assets\脚本\Datas\RoadSideBuildingPictureListData.cs" />
-    <Compile Include="Assets\脚本\Controllers\Player\CarController.cs" />
-    <Compile Include="Assets\脚本\Controllers\Player\RoadMovement.cs" />
     <Compile Include="Assets\脚本\Controllers\Road\Road.cs" />
     <Compile Include="Assets\脚本\Controllers\Tools\PhoneSwitch.cs" />
+    <Compile Include="Assets\脚本\Controllers\Player\CarMovement.cs" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />

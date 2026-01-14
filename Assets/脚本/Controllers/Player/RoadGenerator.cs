@@ -4,14 +4,15 @@ using UnityEngine.Serialization;
 
 namespace Game.Controllers
 {
-    public class RoadMovement : MonoBehaviour
+    public class RoadGenerator : MonoBehaviour
     {
         [Header("引用")]
         public Transform SceneRoot;
         public Transform VCFollowPoint;
         public Transform CamPoint;
         public Transform CamSelf;
-        public CarController CarController;
+        [FormerlySerializedAs("CarController")]
+        public CarMovement carMovement;
         public List<Road> RoadPrefabs;
         public List<Material> RoadMaterials;
 
@@ -65,15 +66,15 @@ namespace Game.Controllers
 
             if (secondRoad.Type == RoadType.Left)
             {
-                CarController.TurningOffset += CarController.TurningSpeed * 0.5f * Time.deltaTime;
+                carMovement.TurningOffset += carMovement.TurningSpeed * 0.5f * Time.deltaTime;
             }
             else if (secondRoad.Type == RoadType.Right)
             {
-                CarController.TurningOffset -= CarController.TurningSpeed * 0.5f * Time.deltaTime;
+                carMovement.TurningOffset -= carMovement.TurningSpeed * 0.5f * Time.deltaTime;
             }
 
             CamPoint.position += move;
-            CamSelf.localPosition = new Vector3(CarController.TurningOffset, 0.5f, 0f);
+            CamSelf.localPosition = new Vector3(carMovement.TurningOffset, 0.5f, 0f);
 
             //当有道路需要删除时，更新道路
             if ((CamPoint.position - secondRoad.transform.position).magnitude < 0.1f)
