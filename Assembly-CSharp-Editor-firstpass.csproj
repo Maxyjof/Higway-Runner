@@ -822,6 +822,9 @@
     <Reference Include="Cinemachine">
       <HintPath>D:\Unity_WorkSpace\Higway Runner\Library\ScriptAssemblies\Cinemachine.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.2D.Sprite.Editor">
+      <HintPath>D:\Unity_WorkSpace\Higway Runner\Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.VisualScripting.Flow">
       <HintPath>D:\Unity_WorkSpace\Higway Runner\Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll</HintPath>
     </Reference>

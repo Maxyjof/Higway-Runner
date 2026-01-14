@@ -359,7 +359,7 @@ MonoBehaviour:
   VCFollowPoint: {fileID: 0}
   CamPoint: {fileID: 1284160598}
   CamSelf: {fileID: 963194228}
-  CarController: {fileID: 1214408005}
+  carMovement: {fileID: 1214408005}
   RoadPrefabs:
   - {fileID: 1597144158476841532, guid: 42b44014d3618344ba2eae7e16c38623, type: 3}
   - {fileID: -5074010663485843602, guid: 03ae817c5e533094586c07a9dfd9333c, type: 3}
@@ -373,7 +373,7 @@ MonoBehaviour:
   - {fileID: 2100000, guid: cb7221379c6c4f947928f323a1773a1f, type: 2}
   RoadStyleIndex: 0
   Speed: 10
-  MaxViewDistance: 10
+  MaxViewDistance: 30
   DriveDistance: 0
   SameAngleCount: 0
   LastRoadTypeIndex: 0
@@ -732,7 +732,7 @@ Camera:
   m_GameObject: {fileID: 963194225}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
+  m_ClearFlags: 2
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2

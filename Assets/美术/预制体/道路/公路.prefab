@@ -481,6 +481,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1181254263432294102, guid: bf083280499c9ba48985b07fbb655033, type: 3}
+      propertyPath: m_FlipX
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1181254263432294102, guid: bf083280499c9ba48985b07fbb655033, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 25bb13e7b98d5174489d6a9bb34a5750, type: 3}
@@ -560,7 +564,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1181254263432294102, guid: bf083280499c9ba48985b07fbb655033, type: 3}
       propertyPath: m_FlipX
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1181254263432294102, guid: bf083280499c9ba48985b07fbb655033, type: 3}
       propertyPath: m_Sprite
@@ -642,7 +646,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1181254263432294102, guid: bf083280499c9ba48985b07fbb655033, type: 3}
       propertyPath: m_FlipX
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1181254263432294102, guid: bf083280499c9ba48985b07fbb655033, type: 3}
       propertyPath: m_Sprite
@@ -721,6 +725,10 @@ PrefabInstance:
     - target: {fileID: 779194895486638075, guid: bf083280499c9ba48985b07fbb655033, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1181254263432294102, guid: bf083280499c9ba48985b07fbb655033, type: 3}
+      propertyPath: m_FlipX
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1181254263432294102, guid: bf083280499c9ba48985b07fbb655033, type: 3}
       propertyPath: m_Sprite
@@ -1043,6 +1051,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1181254263432294102, guid: bf083280499c9ba48985b07fbb655033, type: 3}
+      propertyPath: m_FlipX
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1181254263432294102, guid: bf083280499c9ba48985b07fbb655033, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 25bb13e7b98d5174489d6a9bb34a5750, type: 3}
@@ -1122,7 +1134,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1181254263432294102, guid: bf083280499c9ba48985b07fbb655033, type: 3}
       propertyPath: m_FlipX
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1181254263432294102, guid: bf083280499c9ba48985b07fbb655033, type: 3}
       propertyPath: m_Sprite
