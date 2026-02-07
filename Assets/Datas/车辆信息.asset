@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcb477ead38244f195fb91f2d58266a5, type: 3}
+  m_Name: "\u8F66\u8F86\u4FE1\u606F"
+  m_EditorClassIdentifier: 
+  DataList:
+  - Name: Conbottle
+    Speed: 267
+    Acceleration: 6.2
+    Handing: Fast
+    Gear: 4
+  - Name: Eucalipto
+    Speed: 280
+    Acceleration: 4.2
+    Handing: Normal
+    Gear: 6
+  - Name: Guran
+    Speed: 295
+    Acceleration: 4.2
+    Handing: Medium Slow
+    Gear: 6
+  - Name: Punish T/F
+    Speed: 395
+    Acceleration: 4.2
+    Handing: Very Slow
+    Gear: 4
+  - Name: F800
+    Speed: 335
+    Acceleration: 4.2
+    Handing: Normal
+    Gear: 8
+  - Name: VV1
+    Speed: 350
+    Acceleration: 4.2
+    Handing: Medium
+    Gear: 7
+  - Name: Vission X
+    Speed: 380
+    Acceleration: 4.2
+    Handing: Low
+    Gear: 8
